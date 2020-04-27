@@ -145,11 +145,24 @@ function demo3() {
     .attr('dx', () => {
       return (xScale.rangeBand() - rectPadding) / 2
     })
-    .attr('dy', (d) => {
+    .attr('dy', () => {
       return 20
     })
     .text((d) => {
       return d
+    })
+    .attr('y', () => {
+      const min = yScale.domain()[0]
+      return yScale(min)
+    })
+    .transition()
+    .delay((_d, i) => {
+      return i * 200
+    })
+    .duration(1000)
+    .ease('linear')
+    .attr('y', (d) => {
+      return yScale(d)
     })
 
   //   添加x轴
