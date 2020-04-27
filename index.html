@@ -2,11 +2,31 @@
   <head>
     <meta charset="utf-8" />
     <title>d3 learing</title>
+    <style>
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+
+      .axis text {
+        font-family: sans-serif;
+        font-size: 11px;
+      }
+    </style>
+    <style>
+      .MyText {
+        text-anchor: middle;
+        fill: #ffffff;
+      }
+    </style>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="./index.js" charset="utf-8"></script>
   </head>
   <body onload="handleDocumentReady()">
     <div class="demo1"></div>
     <div class="demo2"></div>
+    <div class="demo3"></div>
   </body>
 </html>
